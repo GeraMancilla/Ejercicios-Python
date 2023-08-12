@@ -1,2 +1,2 @@
 # Ejercicios-Python
-Algunos ejercicios sencillos python
+Algunos ejercicios sencillos python ✌🏻
