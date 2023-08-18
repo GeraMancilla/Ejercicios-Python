@@ -1,0 +1,30 @@
+total_de_alturas = 0
+suma_elementos = 0
+
+alturas = input("Ingresa las alturas separadas por una coma : \n").split(',')
+alturas = [int(x) for x in alturas]
+
+for altura in alturas:
+    total_de_alturas += 1
+
+for elementos in alturas:
+   suma_elementos += elementos
+
+a = round(suma_elementos/total_de_alturas)
+print(f"\nEl promedio de las alturas es: {a}")
+
+
+total_heights = 0
+sum_elements = 0
+
+heights = input("Enter the heights separated by commas: \n").split(',')
+heights = [int(x) for x in heights]
+
+for height in heights:
+    total_heights += 1
+
+for element in heights:
+   sum_elements += element
+
+average = round(sum_elements/total_heights)
+print(f"\nThe average height is: {average}")
