@@ -1,0 +1,25 @@
+estados_de_Mexico = ['Baja California','Baja California Sur','Sonora',
+                     'cuahuila','Chihuahua','Nuevo León', 'Sinaloa',
+                     'Durango', 'Tamaulipas', 'Nayarit','Colima',
+                       'Jalisco','Zacatecas', 'San Luis Potosí',
+                       'Veracruz', 'Tlaxcala', 'Puebla','Querétaro',
+                       'estado de México','Oaxaca','Michoacán',' Chiapas',
+                       'Colima','Guanajuato','Aguascalientes','Morelos','Hidalgo',
+                       'Tabasco','Campeche','Quintana Roo','Yucatán',]
+print(estados_de_Mexico[31 - 1])"""
+
+"""animales = ['Perro','Gato','Oso','Mariposa','Elefante','Pez Payazo',
+            'Tiburon','Camaron','Pulpo','Anguila']"""
+
+"""mamiferos = ['Perro','Gato','Oso','Mariposa','Elefante']
+acuaticos = ['Pez Payazo','Tiburon','Camaron','Pulpo','Anguila']
+
+animales=[mamiferos,acuaticos]
+print(animales)"""
+
+fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+ 
+dirty_dozen = [fruits, vegetables]
+ 
+print(dirty_dozen[2-1][3-2])
