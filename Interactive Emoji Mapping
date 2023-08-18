@@ -1,0 +1,17 @@
+print(">>>>FIGURA DE REFERNCIA<<<<")
+
+row1 = ['⬜️', '⬜️', '⬜️']
+row2 = ['⬜️', '⬜️', '⬜️']
+row3 = ['⬜️', '⬜️', '⬜️']
+
+map = [row1,row2,row3]
+print(f"{row1}\n{row2}\n{row3}\n")
+position = input("Elije las cordenadas donde estara tu 🤣  :")
+fila = int(position[0])
+columna = int(position[1])
+
+map[fila - 1][columna -1] = "🤣"
+
+
+
+print(f"{row1}\n{row2}\n{row3}\n")
