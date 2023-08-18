@@ -1,0 +1,29 @@
+nombre_empresa = input("Ingresa el nombre de tu empresa : ")
+registro_de_empleados = input("Ingresa los nombres de tus empleados no olvides separarlos por una , :").split(',')
+
+longitud = len(registro_de_empleados)
+
+ventas_de_empleados =  []
+for nombre in range (0,longitud):
+   a= float(input(f"Cuantas ventas realizo {registro_de_empleados[nombre]} :"))
+   ventas_de_empleados.append(a)
+
+
+ganador = 0
+indice_ganador = 0
+ventas_totales = sum(ventas_de_empleados)
+for d in range(0,len(registro_de_empleados)):
+   if ventas_de_empleados[d] > ganador:
+      ganador = ventas_de_empleados[d] 
+      indice_ganador = d
+empleado_del_ano = registro_de_empleados[indice_ganador]
+
+def distincion(ventas_totales):
+   a = (ventas_totales/100)*13
+   return a
+    
+     
+print(f"Ventas totales : {ventas_totales}")
+print(f"La empresa  {nombre_empresa } tiene el honor de reconocer a {empleado_del_ano} como el empleado del año y se complace en otorgar la cantidad de {distincion(ventas_totales)} por las ventas realizadas")
+
+
