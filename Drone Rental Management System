@@ -1,0 +1,52 @@
+class drones:
+    def __init__(self,modelo,tamano,color,costoRenta):
+        self.modelo = modelo
+        self.tamano = tamano
+        self.color = color
+        self.costoRenta = costoRenta
+
+    def totalRenta(self):
+       return ((self.costoRenta/100)*16)+self.costoRenta
+       
+
+
+
+print("REGISTRO DE DRONES\n")
+print("\"Drone militar\"")
+mod = (input("Registra el modelo de el dron : "))
+tam = int(input("Registra el tamano de el dron: "))
+col = input("Menciona el color de el dron: ").title()
+col = col.strip()
+costo = float(input("Ingresa el costo de la renta de el dron : "))
+print("")
+drone_miliar = drones(mod,tam,col,costo)
+print("\"Drone comercial\"")
+mod2 = (input("Registra el modelo de el dron : "))
+tam2= int(input("Registra el tamano de el dron: "))
+col2 = input("Menciona el color de el dron: ").title()
+costo2 = float(input("Ingresa el costo de la renta de el dron : "))
+drone_comercial = drones(mod2,tam2,col2,costo2)
+while True:
+
+ print("BIENVENIDO A DRONES RENTAS")
+ print("Nuestro catalogo es el siguiente:")
+ print("1. Dronde militar")
+ print("2. Dron Comercial")
+ print("Preciona la tecla 3 para terminar ")
+ res = int(input())
+ if(res==3):
+    break
+ elif(res==1):
+    print("Exelente los datos de el dron son los siguientes : \n")
+    print("Modelo :",drone_miliar.modelo,"\n","Tamano :",drone_miliar.tamano,"\n","Color: ",drone_miliar.color,"\n","Costo de Renta : ",drone_miliar.costoRenta)
+    print("El dron militar tiene un procnetaje de iva de \"16%\" sobre el total de la renta\n")
+    print("EL TOTAL DE EL COSTO DE LA RENTA DE EL DRON = ",drone_miliar.totalRenta(),"\n")
+ elif(res==2):
+    print("Exelente los datos de el dron son los siguientes : \n")
+    print("Modelo :",drone_comercial.modelo,"\n","Tamano :",drone_comercial.tamano,"\n","Color: ",drone_comercial.color,"\n","Costo de Renta : ",drone_miliar.costoRenta)
+    print("El dron militar tiene un procnetaje de iva de \"16%\" sobre el total de la renta\n")
+    print("EL TOTAL DE EL COSTO DE LA RENTA DE EL DRON = ",drone_miliar.totalRenta(),"\n") 
+
+    
+print("El programa ha terminado")
+
