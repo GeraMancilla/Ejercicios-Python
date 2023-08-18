@@ -1,0 +1,79 @@
+import random
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+def choice_0():
+    print(rock)
+
+def choice_1():
+    print(paper)
+
+def choice_2():
+    print(scissors)
+
+choices = {0: choice_0, 1: choice_1, 2: choice_2}
+
+valid_input = False
+
+while not valid_input:
+    try:
+        player_input = int(input("Ready to play? Choose 0 for rock, 1 for paper, or 2 for scissors: \n"))
+        if player_input < 0 or player_input >= 3:
+            raise ValueError
+        valid_input = True
+    except ValueError:
+        print("Invalid input. Please enter a number between 0 and 2.")
+
+
+
+
+if player_input in choices:
+    choice = choices[player_input]()
+
+else:
+    print("Index out of range")
+
+options = [rock, paper, scissors]
+
+
+total_indices = len(options)
+random_index = random.randint(0, total_indices-1)
+computer_choice = options[random_index]
+
+
+print("Computer's Choice:\n\n")
+print(computer_choice)
+
+if player_input == random_index:
+    print("It's a tie!")
+elif (player_input == 0 and random_index == 2) or \
+     (player_input == 1 and random_index == 0) or \
+     (player_input == 2 and random_index == 1):
+    print("You win!")
+else:
+    print("You lose!")
